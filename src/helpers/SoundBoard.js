@@ -1,8 +1,8 @@
 const files = {
-  'right': '/jeopardy/assets/jeopardy-right.mp3',
-  'wrong': '/jeopardy/assets/jeopardy-wrong.mp3',
-  'board-fill': '/jeopardy/assets/jeopardy-board-fill.mp3',
-  'outro': '/jeopardy/assets/jeopardy-outro.mp3',
+  'right': '../assets/jeopardy-right.mp3',
+  'wrong': '../assets/jeopardy-wrong.mp3',
+  'board-fill': '../assets/jeopardy-board-fill.mp3',
+  'outro': '../assets/jeopardy-outro.mp3',
 }
 
 function simplifyText(text) {
@@ -33,7 +33,7 @@ export default function SoundBoard(speechSynthesisModule) {
         'Accept': 'audio/mpeg',
         'xi-api-key': '55b5a150bed2630a646cad5d016eb841',
       },
-      body: JSON.stringify({ 
+      body: JSON.stringify({
         text: simplifyText(text),
         model_id: 'eleven_monolingual_v1',
         voice_settings: {
